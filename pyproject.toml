@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "codex-mcp-clean"
+version = "0.1.0"
+description = "Linux-only diagnostic cleanup tool for Codex MCP process stacks."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [
+  { name = "lostfrxks" }
+]
+keywords = ["codex", "mcp", "linux", "process", "diagnostic"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: System :: Systems Administration",
+  "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://github.com/lostfrxks/codex-mcp-clean"
+Issues = "https://github.com/lostfrxks/codex-mcp-clean/issues"
+
+[project.scripts]
+codex-mcp-clean = "codex_mcp_clean.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["codex_mcp_clean*"]
